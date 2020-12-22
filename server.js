@@ -31,7 +31,7 @@ app.post('/', validateAuth, pageController.home);
 // GoT
 app.get('/got', validateAuth, gotController.getGot);
 
-// get all books or characters (limited to 50)
+// get all books or characters (limited to 50) cna add parameters like ?gender=Male&culture=Northmen
 app.get('/got/:category', validateAuth, gotController.getCategory);
 
 // get books or characters by number

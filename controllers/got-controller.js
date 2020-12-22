@@ -25,16 +25,21 @@ async function getCategory(req, res) {
     const { category } = req.params;
 
     const query = req.query;
+    let response;
 
-    let searchQuery = '';
+    if (query.length > 0) {
+      let searchQuery = '';
 
-    for (let param in query) {
-      searchQuery += `${param}=${query[param]}&`;
+      for (let param in query) {
+        searchQuery += `${param}=${query[param]}&`;
+      }
+      response = await fetch(`${API_URL}/${category}?` + searchQuery);
+    } else {
+      response = await fetch(`${API_URL}/${category}`);
     }
 
-    console.log(`${API_URL}/${category}?` + searchQuery);
-    const response = await fetch(`${API_URL}/${category}?` + searchQuery);
     const JSON = await response.json();
+
     res.send(JSON);
   } catch (err) {
     if (err.name === 'ValidationError') {
