@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "userId": 1,
+      "name": "Pepe",
+      "email": "pepe@email.com",
+      "hashPassword": "$2a$10$eFK87FXsfTwgLeL89cKAxOuF1fGzKwtDnYwtggQDfKqpOaNhcPYvu",
+      "role": "normal"
+    },
+    {
+      "userId": 2,
+      "name": "Paco",
+      "email": "paco@email.com",
+      "hashPassword": "$2a$10$oXVfpYNlHqpNkNVG8FFsAOtKpnD9mxSPUArZgtok9YfDkumKTZQxC",
+      "role": "normal"
+    },
+    {
+      "userId": 3,
+      "name": "César",
+      "email": "cesar@email.com",
+      "hashPassword": "$2a$10$JnV8qzhaj3sZT01nfiDf2ugfNdeEzgZt8dQxyqvJYoHArZXMpAI7m",
+      "role": "admin"
+    }
+  ]
+}
